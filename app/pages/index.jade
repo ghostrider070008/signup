@@ -6,4 +6,29 @@ block head
 block content
 	.container
 		.row
-			i(class="fa fa-heart" aria-hidden="true")
+			.col-md-2
+				h1 signup
+			.col-md-10
+				h2 New user?
+				p Use the form below to create your account.
+				form
+					div(class="form-row")
+						div(class="form-group col-md-6")
+							label(for="first_name") First name
+							input(type="text" class="form-control" id="first_name" value="Alice")
+						div(class="form-group col-md-6")
+							label(for="last_name") Last name
+							input(type="text" class="form-control" id="last_name" value="Miller")
+					div(class="form-row")
+						div(class="form-group col-md-6")
+							label(for="nationality") Nationality
+							select(class="form-control" id="nationality")
+								option(selected) American
+								option Russian
+						div(class="form-group col-md-6")
+							label(for="email") E-mail
+							input(type="email" class="form-control" id="email" value="alice.miller@yahoo.com")
+						div(class="form-group col-md-6")
+							label(for="date_birth") Date of Birth
+
+					button(type="submit" class="btn btn-primary") Complete Signup
