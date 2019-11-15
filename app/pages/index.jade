@@ -33,22 +33,30 @@ block content
 							.row
 								.col-md-3
 									select(class="form-control" id="date_d")
-										option(selected) 1
-										option 2
+										- for (var i=1; i<=31; i++)
+											option= i
+
 								.col-md-4
 									select(class="form-control" id="date_m")
-										option(selected) Yanuar
-										option Februar
+										- var moth = ["January", "February","March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+										- for name_m in moth
+											option= name_m
+
 								.col-md-3
 									select(class="form-control" id="date_y")
-										option(selected) 1995
-										option 1996
-						div(class="custom-control custom-radio")
-							input(type="radio" class="custom-control-input" id="male_radio" name="gender" checked)
-							label(class="custom-control-label" for="male_radio") Male
-						div(class="custom-control custom-radio")
-							input(type="radio" class="custom-control-input" id="female" name="gender" checked)
-							label(class="custom-control-label" for="female") Female
+										- for (var i=1; i<=118; i++)
+											option= i + 1900
+
+
+						div(class="form-group col-md-6")
+							label Gender
+							.form-row
+								div(class="custom-control custom-radio")
+									input(type="radio" class="custom-control-input" id="male_radio" name="gender" checked)
+									label(class="custom-control-label" for="male_radio") Male
+								div(class="custom-control custom-radio")
+									input(type="radio" class="custom-control-input" id="female" name="gender" checked)
+									label(class="custom-control-label" for="female") Female
 					div(class="form-row")
 						div(class="form-group col-md-6")
 							label(for="password") Password
